@@ -8,11 +8,20 @@
 \usepackage[landscape]{geometry}
 \geometry{hmargin=2cm, vmargin=2cm}
 
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{ifthen}
+
 \newcommand{\zhchar}[4]
 {
 	\begin{minipage}[c][62pt][c]{62pt}
 		\centering
-		\vbox to 39pt {\fontsize{45pt}{45pt}\selectfont #1}
+		\vbox to 39pt {\fontsize{45pt}{45pt}\selectfont
+		\ifthenelse{\equal{#3}{1}}{\color{red}}{}
+		\ifthenelse{\equal{#3}{2}}{\color{LimeGreen}}{}
+		\ifthenelse{\equal{#3}{3}}{\color{blue}}{}
+		\ifthenelse{\equal{#3}{4}}{\color{Magenta}}{}
+		\ifthenelse{\equal{#3}{5}}{\color{gray}}{}
+		#1}
 		\fontsize{18pt}{18pt}\selectfont \pinyin{#2#3}\\
 		\fontsize{10pt}{10pt}\selectfont #4
 	\end{minipage}
@@ -54,7 +63,7 @@
 \zhchar{文}{wen}{2}{language}
 \zhchar{時}{shi}{2}{time}
 \zhchar{沒}{mei}{2}{have not}
-\zhchar{說}{shuo}{2}{to speak}
+\zhchar{說}{shuo}{1}{to speak}
 \zhchar{他}{ta}{2}{he}
 \zhchar{看}{kan}{4}{to see}
 \zhchar{提}{ti}{2}{to carry}
