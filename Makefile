@@ -14,12 +14,14 @@ endif
 endif
 
 TEX_NAME = $(PDF_NAME:%.pdf=%.tex)
-TEX_BUILD_FLAGS= -interaction=nonstopmode -file-line-error
+#TEX_BUILD_FLAGS= -interaction=nonstopmode -file-line-error
 
 COLOR_END = \033[0m
 COLOR_WHITE = \033[1;37m
 BGCOLOR_GREEN = \033[42m
 BGCOLOR_RED = \033[41m
+
+CC_CMD=xelatex
 
 CLEAN_CMD=rm -f
 CLEAN_CMD+= *.backup *.aux *.toc *.ind *.idx *.ilg *.blg *.log *.out *.bbl *.dvi
@@ -44,16 +46,16 @@ view: update
 %.pdf: %.tex $(wildcard *.tex) $(THIS)
 	@$(CLEAN_CMD)
 	@printf "%-18s <$@>...\n" "Building stage 1" ;\
-	pdflatex $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
+	$(CC_CMD) $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
 	OK=$$? ;\
 	if [ $$OK -eq 0 ]; then\
 		printf "%-18s <$@>...\n" "Building stage 2" ;\
-		pdflatex $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
+		$(CC_CMD) $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
 		OK=$$? ;\
 	fi;\
 	if [ $$OK -eq 0 ]; then\
 		printf "%-18s <$@>...\n" "Building stage 3" ;\
-		pdflatex $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
+		$(CC_CMD) $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
 		OK=$$? ;\
 	fi;\
 	if [ $$OK -eq 0 ]; then\
