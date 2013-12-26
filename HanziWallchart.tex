@@ -1,23 +1,48 @@
 \documentclass[a0paper]{article}
 \usepackage{fontspec}
 \usepackage{xeCJK}
+\usepackage{xpinyin}
+
 \setCJKmainfont{WenDingCuGangBiXingKai}
 
 \usepackage[landscape]{geometry}
 \geometry{hmargin=3cm, vmargin=3cm}
 
-\newcommand{\zhchar}[3]
+\newcommand{\zhchar}[4]
 {
 	\begin{minipage}[c][150pt][c]{150pt}
 		\centering
-		\fontsize{80pt}{120pt}\selectfont #1\\
-		\fontsize{20pt}{30pt}\selectfont #2\\
-		\fontsize{12pt}{16pt}\selectfont #3
+		\vbox to 68pt {\fontsize{80pt}{80pt}\selectfont #1}
+		\fontsize{20pt}{20pt}\selectfont \pinyin{#2#3}\\
+		\fontsize{12pt}{12pt}\selectfont #4
 	\end{minipage}
 }
 
 \begin{document}
 
-\zhchar{玩}{wan}{test}
+\zhchar{的}{de}{5}{possessive p.}
+\zhchar{是}{shi}{4}{to be}
+\zhchar{不}{bu}{4}{not}
+\zhchar{我}{wo}{3}{I;me}
+\zhchar{一}{yi}{1}{one;alone}
+\zhchar{有}{you}{3}{have;exist}
+\zhchar{大}{da}{4}{big}
+\zhchar{在}{zai}{4}{at}
+\zhchar{人}{ren}{2}{man}
+\zhchar{了}{le}{5}{completetion p.}
+\zhchar{中}{zhong}{1}{middle}
+\zhchar{到}{a}{4}{to arrive}
+\zhchar{資}{a}{1}{resources}
+\zhchar{要}{a}{4}{to want}
+\zhchar{可}{a}{3}{can; be able to}
+\zhchar{以}{a}{3}{by means of}
+\zhchar{這}{a}{4}{this}
+\zhchar{個}{a}{4}{individual}
+\zhchar{你}{a}{3}{you}
+\zhchar{會}{a}{4}{can;assemble}
+\zhchar{好}{a}{3}{good;well}
+\zhchar{為}{a}{4}{because of}
+\zhchar{上}{a}{4}{on top}
+\zhchar{來}{a}{2}{to come}
 
 \end{document}
