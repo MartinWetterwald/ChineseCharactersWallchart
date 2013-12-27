@@ -1,7 +1,9 @@
 \ProvidesPackage{xzhuyin}
 
 \XeTeXcharclass`\ˊ=1
+\XeTeXcharclass`\ˇ=1
 \XeTeXcharclass`\ˋ=1
+\XeTeXcharclass`\˙=1
 
 \newcommand{\zhuyin}[2]{%
 \ifthenelse{\equal{#1}{zhi}}{ㄓ}{%
@@ -486,9 +488,9 @@ undef%
 %
 \ifthenelse{\equal{#2}{1}}{}{%
 \ifthenelse{\equal{#2}{2}}{\textsuperscript{ˊ}}{%
-\ifthenelse{\equal{#2}{3}}{ˇ}{%
+\ifthenelse{\equal{#2}{3}}{\textsuperscript{ˇ}}{%
 \ifthenelse{\equal{#2}{4}}{\textsuperscript{ˋ}}{%
-\ifthenelse{\equal{#2}{5}}{˙}{%
+\ifthenelse{\equal{#2}{5}}{\textsuperscript{˙}}{%
 undef%
 }}}}}%
 }
