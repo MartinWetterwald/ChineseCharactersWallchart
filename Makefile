@@ -1,7 +1,7 @@
 THIS := $(lastword $(MAKEFILE_LIST))
 
 PDF_PREFIX=
-PDF_NAME=$(PDF_PREFIX)HanziWallchart.pdf
+PDF_NAME=$(PDF_PREFIX)ChineseCharactersWallchart.pdf
 
 #AUTOMATIC OS DETECTION
 OS=$(shell uname -s)
@@ -14,7 +14,7 @@ endif
 endif
 
 TEX_NAME = $(PDF_NAME:%.pdf=%.tex)
-#TEX_BUILD_FLAGS= -interaction=nonstopmode -file-line-error
+TEX_BUILD_FLAGS= -interaction=nonstopmode -file-line-error
 
 COLOR_END = \033[0m
 COLOR_WHITE = \033[1;37m
