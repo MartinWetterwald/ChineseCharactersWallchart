@@ -1,484 +1,495 @@
 \ProvidesPackage{xzhuyin}
 
+\XeTeXcharclass`\ˊ=1
+\XeTeXcharclass`\ˋ=1
+
 \newcommand{\zhuyin}[2]
 {%
-	\ifthenelse{\equal{#1}{zhi}}{ㄓ}{
-	\ifthenelse{\equal{#1}{chi}}{ㄔ}{
-	\ifthenelse{\equal{#1}{shi}}{ㄕ}{
-	\ifthenelse{\equal{#1}{ri}}{ㄖ}{
-	\ifthenelse{\equal{#1}{zi}}{ㄗ}{
-	\ifthenelse{\equal{#1}{ci}}{ㄘ}{
-	\ifthenelse{\equal{#1}{si}}{ㄙ}{%
+\ifthenelse{\equal{#1}{zhi}}{ㄓ}{%
+\ifthenelse{\equal{#1}{chi}}{ㄔ}{%
+\ifthenelse{\equal{#1}{shi}}{ㄕ}{%
+\ifthenelse{\equal{#1}{ri}}{ㄖ}{%
+\ifthenelse{\equal{#1}{zi}}{ㄗ}{%
+\ifthenelse{\equal{#1}{ci}}{ㄘ}{%
+\ifthenelse{\equal{#1}{si}}{ㄙ}{%
 %
-	\ifthenelse{\equal{#1}{a}}{ㄚ}{
-	\ifthenelse{\equal{#1}{ba}}{ㄅㄚ}{
-	\ifthenelse{\equal{#1}{pa}}{ㄆㄚ}{
-	\ifthenelse{\equal{#1}{ma}}{ㄇㄚ}{
-	\ifthenelse{\equal{#1}{fa}}{ㄈㄚ}{
-	\ifthenelse{\equal{#1}{da}}{ㄉㄚ}{
-	\ifthenelse{\equal{#1}{ta}}{ㄊㄚ}{
-	\ifthenelse{\equal{#1}{na}}{ㄋㄚ}{
-	\ifthenelse{\equal{#1}{la}}{ㄌㄚ}{
-	\ifthenelse{\equal{#1}{ga}}{ㄍㄚ}{
-	\ifthenelse{\equal{#1}{ka}}{ㄎㄚ}{
-	\ifthenelse{\equal{#1}{ha}}{ㄏㄚ}{
-	\ifthenelse{\equal{#1}{zha}}{ㄓㄚ}{
-	\ifthenelse{\equal{#1}{cha}}{ㄔㄚ}{
-	\ifthenelse{\equal{#1}{sha}}{ㄕㄚ}{
-	\ifthenelse{\equal{#1}{za}}{ㄗㄚ}{
-	\ifthenelse{\equal{#1}{ca}}{ㄘㄚ}{
-	\ifthenelse{\equal{#1}{sa}}{ㄙㄚ}{%
+\ifthenelse{\equal{#1}{a}}{ㄚ}{%
+\ifthenelse{\equal{#1}{ba}}{ㄅㄚ}{%
+\ifthenelse{\equal{#1}{pa}}{ㄆㄚ}{%
+\ifthenelse{\equal{#1}{ma}}{ㄇㄚ}{%
+\ifthenelse{\equal{#1}{fa}}{ㄈㄚ}{%
+\ifthenelse{\equal{#1}{da}}{ㄉㄚ}{%
+\ifthenelse{\equal{#1}{ta}}{ㄊㄚ}{%
+\ifthenelse{\equal{#1}{na}}{ㄋㄚ}{%
+\ifthenelse{\equal{#1}{la}}{ㄌㄚ}{%
+\ifthenelse{\equal{#1}{ga}}{ㄍㄚ}{%
+\ifthenelse{\equal{#1}{ka}}{ㄎㄚ}{%
+\ifthenelse{\equal{#1}{ha}}{ㄏㄚ}{%
+\ifthenelse{\equal{#1}{zha}}{ㄓㄚ}{%
+\ifthenelse{\equal{#1}{cha}}{ㄔㄚ}{%
+\ifthenelse{\equal{#1}{sha}}{ㄕㄚ}{%
+\ifthenelse{\equal{#1}{za}}{ㄗㄚ}{%
+\ifthenelse{\equal{#1}{ca}}{ㄘㄚ}{%
+\ifthenelse{\equal{#1}{sa}}{ㄙㄚ}{%
 %
-	\ifthenelse{\equal{#1}{o}}{ㄛ}{
-	\ifthenelse{\equal{#1}{bo}}{ㄅㄛ}{
-	\ifthenelse{\equal{#1}{po}}{ㄆㄛ}{
-	\ifthenelse{\equal{#1}{mo}}{ㄇㄛ}{
-	\ifthenelse{\equal{#1}{fo}}{ㄈㄛ}{
-	\ifthenelse{\equal{#1}{lo}}{ㄌㄛ}{%
+\ifthenelse{\equal{#1}{o}}{ㄛ}{%
+\ifthenelse{\equal{#1}{bo}}{ㄅㄛ}{%
+\ifthenelse{\equal{#1}{po}}{ㄆㄛ}{%
+\ifthenelse{\equal{#1}{mo}}{ㄇㄛ}{%
+\ifthenelse{\equal{#1}{fo}}{ㄈㄛ}{%
+\ifthenelse{\equal{#1}{lo}}{ㄌㄛ}{%
 %
-	\ifthenelse{\equal{#1}{e}}{ㄜ}{
-	\ifthenelse{\equal{#1}{me}}{ㄇㄜ}{
-	\ifthenelse{\equal{#1}{de}}{ㄉㄜ}{
-	\ifthenelse{\equal{#1}{te}}{ㄊㄜ}{
-	\ifthenelse{\equal{#1}{ne}}{ㄋㄜ}{
-	\ifthenelse{\equal{#1}{le}}{ㄌㄜ}{
-	\ifthenelse{\equal{#1}{ge}}{ㄍㄜ}{
-	\ifthenelse{\equal{#1}{ke}}{ㄎㄜ}{
-	\ifthenelse{\equal{#1}{he}}{ㄏㄜ}{
-	\ifthenelse{\equal{#1}{zhe}}{ㄓㄜ}{
-	\ifthenelse{\equal{#1}{che}}{ㄔㄜ}{
-	\ifthenelse{\equal{#1}{she}}{ㄕㄜ}{
-	\ifthenelse{\equal{#1}{re}}{ㄕㄜ}{
-	\ifthenelse{\equal{#1}{ze}}{ㄗㄜ}{
-	\ifthenelse{\equal{#1}{ce}}{ㄘㄜ}{
-	\ifthenelse{\equal{#1}{se}}{ㄙㄜ}{%
+\ifthenelse{\equal{#1}{e}}{ㄜ}{%
+\ifthenelse{\equal{#1}{me}}{ㄇㄜ}{%
+\ifthenelse{\equal{#1}{de}}{ㄉㄜ}{%
+\ifthenelse{\equal{#1}{te}}{ㄊㄜ}{%
+\ifthenelse{\equal{#1}{ne}}{ㄋㄜ}{%
+\ifthenelse{\equal{#1}{le}}{ㄌㄜ}{%
+\ifthenelse{\equal{#1}{ge}}{ㄍㄜ}{%
+\ifthenelse{\equal{#1}{ke}}{ㄎㄜ}{%
+\ifthenelse{\equal{#1}{he}}{ㄏㄜ}{%
+\ifthenelse{\equal{#1}{zhe}}{ㄓㄜ}{%
+\ifthenelse{\equal{#1}{che}}{ㄔㄜ}{%
+\ifthenelse{\equal{#1}{she}}{ㄕㄜ}{%
+\ifthenelse{\equal{#1}{re}}{ㄕㄜ}{%
+\ifthenelse{\equal{#1}{ze}}{ㄗㄜ}{%
+\ifthenelse{\equal{#1}{ce}}{ㄘㄜ}{%
+\ifthenelse{\equal{#1}{se}}{ㄙㄜ}{%
 %
-	\ifthenelse{\equal{#1}{ai}}{ㄞ}{
-	\ifthenelse{\equal{#1}{bai}}{ㄅㄞ}{
-	\ifthenelse{\equal{#1}{pai}}{ㄆㄞ}{
-	\ifthenelse{\equal{#1}{mai}}{ㄇㄞ}{
-	\ifthenelse{\equal{#1}{dai}}{ㄉㄞ}{
-	\ifthenelse{\equal{#1}{tai}}{ㄊㄞ}{
-	\ifthenelse{\equal{#1}{nai}}{ㄋㄞ}{
-	\ifthenelse{\equal{#1}{lai}}{ㄌㄞ}{
-	\ifthenelse{\equal{#1}{gai}}{ㄍㄞ}{
-	\ifthenelse{\equal{#1}{kai}}{ㄎㄞ}{
-	\ifthenelse{\equal{#1}{hai}}{ㄏㄞ}{
-	\ifthenelse{\equal{#1}{zhai}}{ㄓㄞ}{
-	\ifthenelse{\equal{#1}{chai}}{ㄔㄞ}{
-	\ifthenelse{\equal{#1}{shai}}{ㄕㄞ}{
-	\ifthenelse{\equal{#1}{zai}}{ㄗㄞ}{
-	\ifthenelse{\equal{#1}{cai}}{ㄘㄞ}{
-	\ifthenelse{\equal{#1}{sai}}{ㄙㄞ}{%
+\ifthenelse{\equal{#1}{ai}}{ㄞ}{%
+\ifthenelse{\equal{#1}{bai}}{ㄅㄞ}{%
+\ifthenelse{\equal{#1}{pai}}{ㄆㄞ}{%
+\ifthenelse{\equal{#1}{mai}}{ㄇㄞ}{%
+\ifthenelse{\equal{#1}{dai}}{ㄉㄞ}{%
+\ifthenelse{\equal{#1}{tai}}{ㄊㄞ}{%
+\ifthenelse{\equal{#1}{nai}}{ㄋㄞ}{%
+\ifthenelse{\equal{#1}{lai}}{ㄌㄞ}{%
+\ifthenelse{\equal{#1}{gai}}{ㄍㄞ}{%
+\ifthenelse{\equal{#1}{kai}}{ㄎㄞ}{%
+\ifthenelse{\equal{#1}{hai}}{ㄏㄞ}{%
+\ifthenelse{\equal{#1}{zhai}}{ㄓㄞ}{%
+\ifthenelse{\equal{#1}{chai}}{ㄔㄞ}{%
+\ifthenelse{\equal{#1}{shai}}{ㄕㄞ}{%
+\ifthenelse{\equal{#1}{zai}}{ㄗㄞ}{%
+\ifthenelse{\equal{#1}{cai}}{ㄘㄞ}{%
+\ifthenelse{\equal{#1}{sai}}{ㄙㄞ}{%
 %
-	\ifthenelse{\equal{#1}{ei}}{ㄟ}{
-	\ifthenelse{\equal{#1}{bei}}{ㄅㄟ}{
-	\ifthenelse{\equal{#1}{pei}}{ㄆㄟ}{
-	\ifthenelse{\equal{#1}{mei}}{ㄇㄟ}{
-	\ifthenelse{\equal{#1}{fei}}{ㄈㄟ}{
-	\ifthenelse{\equal{#1}{dei}}{ㄉㄟ}{
-	\ifthenelse{\equal{#1}{nei}}{ㄋㄟ}{
-	\ifthenelse{\equal{#1}{lei}}{ㄌㄟ}{
-	\ifthenelse{\equal{#1}{gei}}{ㄍㄟ}{
-	\ifthenelse{\equal{#1}{hei}}{ㄏㄟ}{
-	\ifthenelse{\equal{#1}{zhei}}{ㄓㄟ}{
-	\ifthenelse{\equal{#1}{shei}}{ㄕㄟ}{
-	\ifthenelse{\equal{#1}{zei}}{ㄗㄟ}{%
+\ifthenelse{\equal{#1}{ei}}{ㄟ}{%
+\ifthenelse{\equal{#1}{bei}}{ㄅㄟ}{%
+\ifthenelse{\equal{#1}{pei}}{ㄆㄟ}{%
+\ifthenelse{\equal{#1}{mei}}{ㄇㄟ}{%
+\ifthenelse{\equal{#1}{fei}}{ㄈㄟ}{%
+\ifthenelse{\equal{#1}{dei}}{ㄉㄟ}{%
+\ifthenelse{\equal{#1}{nei}}{ㄋㄟ}{%
+\ifthenelse{\equal{#1}{lei}}{ㄌㄟ}{%
+\ifthenelse{\equal{#1}{gei}}{ㄍㄟ}{%
+\ifthenelse{\equal{#1}{hei}}{ㄏㄟ}{%
+\ifthenelse{\equal{#1}{zhei}}{ㄓㄟ}{%
+\ifthenelse{\equal{#1}{shei}}{ㄕㄟ}{%
+\ifthenelse{\equal{#1}{zei}}{ㄗㄟ}{%
 %
-	\ifthenelse{\equal{#1}{ao}}{ㄠ}{
-	\ifthenelse{\equal{#1}{bao}}{ㄅㄠ}{
-	\ifthenelse{\equal{#1}{pao}}{ㄆㄠ}{
-	\ifthenelse{\equal{#1}{mao}}{ㄇㄠ}{
-	\ifthenelse{\equal{#1}{dao}}{ㄉㄠ}{
-	\ifthenelse{\equal{#1}{tao}}{ㄊㄠ}{
-	\ifthenelse{\equal{#1}{nao}}{ㄋㄠ}{
-	\ifthenelse{\equal{#1}{lao}}{ㄌㄠ}{
-	\ifthenelse{\equal{#1}{gao}}{ㄍㄠ}{
-	\ifthenelse{\equal{#1}{kao}}{ㄎㄠ}{
-	\ifthenelse{\equal{#1}{hao}}{ㄏㄠ}{
-	\ifthenelse{\equal{#1}{zhao}}{ㄓㄠ}{
-	\ifthenelse{\equal{#1}{chao}}{ㄔㄠ}{
-	\ifthenelse{\equal{#1}{shao}}{ㄕㄠ}{
-	\ifthenelse{\equal{#1}{rao}}{ㄖㄠ}{
-	\ifthenelse{\equal{#1}{zao}}{ㄗㄠ}{
-	\ifthenelse{\equal{#1}{cao}}{ㄘㄠ}{
-	\ifthenelse{\equal{#1}{sao}}{ㄙㄠ}{%
+\ifthenelse{\equal{#1}{ao}}{ㄠ}{%
+\ifthenelse{\equal{#1}{bao}}{ㄅㄠ}{%
+\ifthenelse{\equal{#1}{pao}}{ㄆㄠ}{%
+\ifthenelse{\equal{#1}{mao}}{ㄇㄠ}{%
+\ifthenelse{\equal{#1}{dao}}{ㄉㄠ}{%
+\ifthenelse{\equal{#1}{tao}}{ㄊㄠ}{%
+\ifthenelse{\equal{#1}{nao}}{ㄋㄠ}{%
+\ifthenelse{\equal{#1}{lao}}{ㄌㄠ}{%
+\ifthenelse{\equal{#1}{gao}}{ㄍㄠ}{%
+\ifthenelse{\equal{#1}{kao}}{ㄎㄠ}{%
+\ifthenelse{\equal{#1}{hao}}{ㄏㄠ}{%
+\ifthenelse{\equal{#1}{zhao}}{ㄓㄠ}{%
+\ifthenelse{\equal{#1}{chao}}{ㄔㄠ}{%
+\ifthenelse{\equal{#1}{shao}}{ㄕㄠ}{%
+\ifthenelse{\equal{#1}{rao}}{ㄖㄠ}{%
+\ifthenelse{\equal{#1}{zao}}{ㄗㄠ}{%
+\ifthenelse{\equal{#1}{cao}}{ㄘㄠ}{%
+\ifthenelse{\equal{#1}{sao}}{ㄙㄠ}{%
 %
-	\ifthenelse{\equal{#1}{ou}}{ㄡ}{
-	\ifthenelse{\equal{#1}{pou}}{ㄆㄡ}{
-	\ifthenelse{\equal{#1}{mou}}{ㄇㄡ}{
-	\ifthenelse{\equal{#1}{fou}}{ㄈㄡ}{
-	\ifthenelse{\equal{#1}{dou}}{ㄉㄡ}{
-	\ifthenelse{\equal{#1}{tou}}{ㄊㄡ}{
-	\ifthenelse{\equal{#1}{nou}}{ㄋㄡ}{
-	\ifthenelse{\equal{#1}{lou}}{ㄌㄡ}{
-	\ifthenelse{\equal{#1}{gou}}{ㄍㄡ}{
-	\ifthenelse{\equal{#1}{kou}}{ㄎㄡ}{
-	\ifthenelse{\equal{#1}{hou}}{ㄏㄡ}{
-	\ifthenelse{\equal{#1}{zhou}}{ㄓㄡ}{
-	\ifthenelse{\equal{#1}{chou}}{ㄔㄡ}{
-	\ifthenelse{\equal{#1}{shou}}{ㄕㄡ}{
-	\ifthenelse{\equal{#1}{rou}}{ㄖㄡ}{
-	\ifthenelse{\equal{#1}{zou}}{ㄗㄡ}{
-	\ifthenelse{\equal{#1}{cou}}{ㄘㄡ}{
-	\ifthenelse{\equal{#1}{sou}}{ㄙㄡ}{%
+\ifthenelse{\equal{#1}{ou}}{ㄡ}{%
+\ifthenelse{\equal{#1}{pou}}{ㄆㄡ}{%
+\ifthenelse{\equal{#1}{mou}}{ㄇㄡ}{%
+\ifthenelse{\equal{#1}{fou}}{ㄈㄡ}{%
+\ifthenelse{\equal{#1}{dou}}{ㄉㄡ}{%
+\ifthenelse{\equal{#1}{tou}}{ㄊㄡ}{%
+\ifthenelse{\equal{#1}{nou}}{ㄋㄡ}{%
+\ifthenelse{\equal{#1}{lou}}{ㄌㄡ}{%
+\ifthenelse{\equal{#1}{gou}}{ㄍㄡ}{%
+\ifthenelse{\equal{#1}{kou}}{ㄎㄡ}{%
+\ifthenelse{\equal{#1}{hou}}{ㄏㄡ}{%
+\ifthenelse{\equal{#1}{zhou}}{ㄓㄡ}{%
+\ifthenelse{\equal{#1}{chou}}{ㄔㄡ}{%
+\ifthenelse{\equal{#1}{shou}}{ㄕㄡ}{%
+\ifthenelse{\equal{#1}{rou}}{ㄖㄡ}{%
+\ifthenelse{\equal{#1}{zou}}{ㄗㄡ}{%
+\ifthenelse{\equal{#1}{cou}}{ㄘㄡ}{%
+\ifthenelse{\equal{#1}{sou}}{ㄙㄡ}{%
 %
-	\ifthenelse{\equal{#1}{an}}{ㄢ}{
-	\ifthenelse{\equal{#1}{ban}}{ㄅㄢ}{
-	\ifthenelse{\equal{#1}{pan}}{ㄆㄢ}{
-	\ifthenelse{\equal{#1}{man}}{ㄇㄢ}{
-	\ifthenelse{\equal{#1}{fan}}{ㄈㄢ}{
-	\ifthenelse{\equal{#1}{dan}}{ㄉㄢ}{
-	\ifthenelse{\equal{#1}{tan}}{ㄊㄢ}{
-	\ifthenelse{\equal{#1}{nan}}{ㄋㄢ}{
-	\ifthenelse{\equal{#1}{lan}}{ㄌㄢ}{
-	\ifthenelse{\equal{#1}{gan}}{ㄍㄢ}{
-	\ifthenelse{\equal{#1}{kan}}{ㄎㄢ}{
-	\ifthenelse{\equal{#1}{han}}{ㄏㄢ}{
-	\ifthenelse{\equal{#1}{zhan}}{ㄓㄢ}{
-	\ifthenelse{\equal{#1}{chan}}{ㄔㄢ}{
-	\ifthenelse{\equal{#1}{shan}}{ㄕㄢ}{
-	\ifthenelse{\equal{#1}{ran}}{ㄖㄢ}{
-	\ifthenelse{\equal{#1}{zan}}{ㄗㄢ}{
-	\ifthenelse{\equal{#1}{can}}{ㄘㄢ}{
-	\ifthenelse{\equal{#1}{san}}{ㄙㄢ}{%
+\ifthenelse{\equal{#1}{an}}{ㄢ}{%
+\ifthenelse{\equal{#1}{ban}}{ㄅㄢ}{%
+\ifthenelse{\equal{#1}{pan}}{ㄆㄢ}{%
+\ifthenelse{\equal{#1}{man}}{ㄇㄢ}{%
+\ifthenelse{\equal{#1}{fan}}{ㄈㄢ}{%
+\ifthenelse{\equal{#1}{dan}}{ㄉㄢ}{%
+\ifthenelse{\equal{#1}{tan}}{ㄊㄢ}{%
+\ifthenelse{\equal{#1}{nan}}{ㄋㄢ}{%
+\ifthenelse{\equal{#1}{lan}}{ㄌㄢ}{%
+\ifthenelse{\equal{#1}{gan}}{ㄍㄢ}{%
+\ifthenelse{\equal{#1}{kan}}{ㄎㄢ}{%
+\ifthenelse{\equal{#1}{han}}{ㄏㄢ}{%
+\ifthenelse{\equal{#1}{zhan}}{ㄓㄢ}{%
+\ifthenelse{\equal{#1}{chan}}{ㄔㄢ}{%
+\ifthenelse{\equal{#1}{shan}}{ㄕㄢ}{%
+\ifthenelse{\equal{#1}{ran}}{ㄖㄢ}{%
+\ifthenelse{\equal{#1}{zan}}{ㄗㄢ}{%
+\ifthenelse{\equal{#1}{can}}{ㄘㄢ}{%
+\ifthenelse{\equal{#1}{san}}{ㄙㄢ}{%
 %
-	\ifthenelse{\equal{#1}{en}}{ㄣ}{
-	\ifthenelse{\equal{#1}{ben}}{ㄅㄣ}{
-	\ifthenelse{\equal{#1}{pen}}{ㄆㄣ}{
-	\ifthenelse{\equal{#1}{men}}{ㄇㄣ}{
-	\ifthenelse{\equal{#1}{fen}}{ㄈㄣ}{
-	\ifthenelse{\equal{#1}{nen}}{ㄋㄣ}{
-	\ifthenelse{\equal{#1}{gen}}{ㄍㄣ}{
-	\ifthenelse{\equal{#1}{ken}}{ㄎㄣ}{
-	\ifthenelse{\equal{#1}{hen}}{ㄏㄣ}{
-	\ifthenelse{\equal{#1}{zhen}}{ㄓㄣ}{
-	\ifthenelse{\equal{#1}{chen}}{ㄔㄣ}{
-	\ifthenelse{\equal{#1}{shen}}{ㄕㄣ}{
-	\ifthenelse{\equal{#1}{ren}}{ㄖㄣ}{
-	\ifthenelse{\equal{#1}{zen}}{ㄗㄣ}{
-	\ifthenelse{\equal{#1}{cen}}{ㄘㄣ}{
-	\ifthenelse{\equal{#1}{sen}}{ㄙㄣ}{%
+\ifthenelse{\equal{#1}{en}}{ㄣ}{%
+\ifthenelse{\equal{#1}{ben}}{ㄅㄣ}{%
+\ifthenelse{\equal{#1}{pen}}{ㄆㄣ}{%
+\ifthenelse{\equal{#1}{men}}{ㄇㄣ}{%
+\ifthenelse{\equal{#1}{fen}}{ㄈㄣ}{%
+\ifthenelse{\equal{#1}{nen}}{ㄋㄣ}{%
+\ifthenelse{\equal{#1}{gen}}{ㄍㄣ}{%
+\ifthenelse{\equal{#1}{ken}}{ㄎㄣ}{%
+\ifthenelse{\equal{#1}{hen}}{ㄏㄣ}{%
+\ifthenelse{\equal{#1}{zhen}}{ㄓㄣ}{%
+\ifthenelse{\equal{#1}{chen}}{ㄔㄣ}{%
+\ifthenelse{\equal{#1}{shen}}{ㄕㄣ}{%
+\ifthenelse{\equal{#1}{ren}}{ㄖㄣ}{%
+\ifthenelse{\equal{#1}{zen}}{ㄗㄣ}{%
+\ifthenelse{\equal{#1}{cen}}{ㄘㄣ}{%
+\ifthenelse{\equal{#1}{sen}}{ㄙㄣ}{%
 %
-	\ifthenelse{\equal{#1}{ang}}{ㄤ}{
-	\ifthenelse{\equal{#1}{bang}}{ㄅㄤ}{
-	\ifthenelse{\equal{#1}{pang}}{ㄆㄤ}{
-	\ifthenelse{\equal{#1}{mang}}{ㄇㄤ}{
-	\ifthenelse{\equal{#1}{fang}}{ㄈㄤ}{
-	\ifthenelse{\equal{#1}{dang}}{ㄉㄤ}{
-	\ifthenelse{\equal{#1}{tang}}{ㄊㄤ}{
-	\ifthenelse{\equal{#1}{nang}}{ㄋㄤ}{
-	\ifthenelse{\equal{#1}{lang}}{ㄌㄤ}{
-	\ifthenelse{\equal{#1}{gang}}{ㄍㄤ}{
-	\ifthenelse{\equal{#1}{kang}}{ㄎㄤ}{
-	\ifthenelse{\equal{#1}{hang}}{ㄏㄤ}{
-	\ifthenelse{\equal{#1}{zhang}}{ㄓㄤ}{
-	\ifthenelse{\equal{#1}{chang}}{ㄔㄤ}{
-	\ifthenelse{\equal{#1}{shang}}{ㄕㄤ}{
-	\ifthenelse{\equal{#1}{rang}}{ㄖㄤ}{
-	\ifthenelse{\equal{#1}{zang}}{ㄗㄤ}{
-	\ifthenelse{\equal{#1}{cang}}{ㄘㄤ}{
-	\ifthenelse{\equal{#1}{sang}}{ㄙㄤ}{%
+\ifthenelse{\equal{#1}{ang}}{ㄤ}{%
+\ifthenelse{\equal{#1}{bang}}{ㄅㄤ}{%
+\ifthenelse{\equal{#1}{pang}}{ㄆㄤ}{%
+\ifthenelse{\equal{#1}{mang}}{ㄇㄤ}{%
+\ifthenelse{\equal{#1}{fang}}{ㄈㄤ}{%
+\ifthenelse{\equal{#1}{dang}}{ㄉㄤ}{%
+\ifthenelse{\equal{#1}{tang}}{ㄊㄤ}{%
+\ifthenelse{\equal{#1}{nang}}{ㄋㄤ}{%
+\ifthenelse{\equal{#1}{lang}}{ㄌㄤ}{%
+\ifthenelse{\equal{#1}{gang}}{ㄍㄤ}{%
+\ifthenelse{\equal{#1}{kang}}{ㄎㄤ}{%
+\ifthenelse{\equal{#1}{hang}}{ㄏㄤ}{%
+\ifthenelse{\equal{#1}{zhang}}{ㄓㄤ}{%
+\ifthenelse{\equal{#1}{chang}}{ㄔㄤ}{%
+\ifthenelse{\equal{#1}{shang}}{ㄕㄤ}{%
+\ifthenelse{\equal{#1}{rang}}{ㄖㄤ}{%
+\ifthenelse{\equal{#1}{zang}}{ㄗㄤ}{%
+\ifthenelse{\equal{#1}{cang}}{ㄘㄤ}{%
+\ifthenelse{\equal{#1}{sang}}{ㄙㄤ}{%
 %
-	\ifthenelse{\equal{#1}{eng}}{ㄥ}{
-	\ifthenelse{\equal{#1}{beng}}{ㄅㄥ}{
-	\ifthenelse{\equal{#1}{peng}}{ㄆㄥ}{
-	\ifthenelse{\equal{#1}{meng}}{ㄇㄥ}{
-	\ifthenelse{\equal{#1}{feng}}{ㄈㄥ}{
-	\ifthenelse{\equal{#1}{deng}}{ㄉㄥ}{
-	\ifthenelse{\equal{#1}{teng}}{ㄊㄥ}{
-	\ifthenelse{\equal{#1}{neng}}{ㄋㄥ}{
-	\ifthenelse{\equal{#1}{leng}}{ㄌㄥ}{
-	\ifthenelse{\equal{#1}{geng}}{ㄍㄥ}{
-	\ifthenelse{\equal{#1}{keng}}{ㄎㄥ}{
-	\ifthenelse{\equal{#1}{heng}}{ㄏㄥ}{
-	\ifthenelse{\equal{#1}{zheng}}{ㄓㄥ}{
-	\ifthenelse{\equal{#1}{cheng}}{ㄔㄥ}{
-	\ifthenelse{\equal{#1}{sheng}}{ㄕㄥ}{
-	\ifthenelse{\equal{#1}{reng}}{ㄖㄥ}{
-	\ifthenelse{\equal{#1}{zeng}}{ㄗㄥ}{
-	\ifthenelse{\equal{#1}{ceng}}{ㄘㄥ}{
-	\ifthenelse{\equal{#1}{seng}}{ㄙㄥ}{%
+\ifthenelse{\equal{#1}{eng}}{ㄥ}{%
+\ifthenelse{\equal{#1}{beng}}{ㄅㄥ}{%
+\ifthenelse{\equal{#1}{peng}}{ㄆㄥ}{%
+\ifthenelse{\equal{#1}{meng}}{ㄇㄥ}{%
+\ifthenelse{\equal{#1}{feng}}{ㄈㄥ}{%
+\ifthenelse{\equal{#1}{deng}}{ㄉㄥ}{%
+\ifthenelse{\equal{#1}{teng}}{ㄊㄥ}{%
+\ifthenelse{\equal{#1}{neng}}{ㄋㄥ}{%
+\ifthenelse{\equal{#1}{leng}}{ㄌㄥ}{%
+\ifthenelse{\equal{#1}{geng}}{ㄍㄥ}{%
+\ifthenelse{\equal{#1}{keng}}{ㄎㄥ}{%
+\ifthenelse{\equal{#1}{heng}}{ㄏㄥ}{%
+\ifthenelse{\equal{#1}{zheng}}{ㄓㄥ}{%
+\ifthenelse{\equal{#1}{cheng}}{ㄔㄥ}{%
+\ifthenelse{\equal{#1}{sheng}}{ㄕㄥ}{%
+\ifthenelse{\equal{#1}{reng}}{ㄖㄥ}{%
+\ifthenelse{\equal{#1}{zeng}}{ㄗㄥ}{%
+\ifthenelse{\equal{#1}{ceng}}{ㄘㄥ}{%
+\ifthenelse{\equal{#1}{seng}}{ㄙㄥ}{%
 %
-	\ifthenelse{\equal{#1}{er}}{ㄦ}{%
+\ifthenelse{\equal{#1}{er}}{ㄦ}{%
 %
-	\ifthenelse{\equal{#1}{yi}}{ㄧ}{
-	\ifthenelse{\equal{#1}{bi}}{ㄅㄧ}{
-	\ifthenelse{\equal{#1}{pi}}{ㄆㄧ}{
-	\ifthenelse{\equal{#1}{mi}}{ㄇㄧ}{
-	\ifthenelse{\equal{#1}{di}}{ㄉㄧ}{
-	\ifthenelse{\equal{#1}{ti}}{ㄊㄧ}{
-	\ifthenelse{\equal{#1}{ni}}{ㄋㄧ}{
-	\ifthenelse{\equal{#1}{li}}{ㄌㄧ}{
-	\ifthenelse{\equal{#1}{ji}}{ㄐㄧ}{
-	\ifthenelse{\equal{#1}{qi}}{ㄑㄧ}{
-	\ifthenelse{\equal{#1}{xi}}{ㄒㄧ}{%
+\ifthenelse{\equal{#1}{yi}}{ㄧ}{%
+\ifthenelse{\equal{#1}{bi}}{ㄅㄧ}{%
+\ifthenelse{\equal{#1}{pi}}{ㄆㄧ}{%
+\ifthenelse{\equal{#1}{mi}}{ㄇㄧ}{%
+\ifthenelse{\equal{#1}{di}}{ㄉㄧ}{%
+\ifthenelse{\equal{#1}{ti}}{ㄊㄧ}{%
+\ifthenelse{\equal{#1}{ni}}{ㄋㄧ}{%
+\ifthenelse{\equal{#1}{li}}{ㄌㄧ}{%
+\ifthenelse{\equal{#1}{ji}}{ㄐㄧ}{%
+\ifthenelse{\equal{#1}{qi}}{ㄑㄧ}{%
+\ifthenelse{\equal{#1}{xi}}{ㄒㄧ}{%
 %
-	\ifthenelse{\equal{#1}{ya}}{ㄧㄚ}{
-	\ifthenelse{\equal{#1}{dia}}{ㄉㄧㄚ}{
-	\ifthenelse{\equal{#1}{lia}}{ㄌㄧㄚ}{
-	\ifthenelse{\equal{#1}{jia}}{ㄐㄧㄚ}{
-	\ifthenelse{\equal{#1}{qia}}{ㄑㄧㄚ}{
-	\ifthenelse{\equal{#1}{xia}}{ㄒㄧㄚ}{%
+\ifthenelse{\equal{#1}{ya}}{ㄧㄚ}{%
+\ifthenelse{\equal{#1}{dia}}{ㄉㄧㄚ}{%
+\ifthenelse{\equal{#1}{lia}}{ㄌㄧㄚ}{%
+\ifthenelse{\equal{#1}{jia}}{ㄐㄧㄚ}{%
+\ifthenelse{\equal{#1}{qia}}{ㄑㄧㄚ}{%
+\ifthenelse{\equal{#1}{xia}}{ㄒㄧㄚ}{%
 %
-	\ifthenelse{\equal{#1}{ye}}{ㄧㄝ}{
-	\ifthenelse{\equal{#1}{bie}}{ㄅㄧㄝ}{
-	\ifthenelse{\equal{#1}{pie}}{ㄆㄧㄝ}{
-	\ifthenelse{\equal{#1}{mie}}{ㄇㄧㄝ}{
-	\ifthenelse{\equal{#1}{die}}{ㄉㄧㄝ}{
-	\ifthenelse{\equal{#1}{tie}}{ㄊㄧㄝ}{
-	\ifthenelse{\equal{#1}{nie}}{ㄋㄧㄝ}{
-	\ifthenelse{\equal{#1}{lie}}{ㄌㄧㄝ}{
-	\ifthenelse{\equal{#1}{jie}}{ㄐㄧㄝ}{
-	\ifthenelse{\equal{#1}{qie}}{ㄑㄧㄝ}{
-	\ifthenelse{\equal{#1}{xie}}{ㄒㄧㄝ}{%
+\ifthenelse{\equal{#1}{ye}}{ㄧㄝ}{%
+\ifthenelse{\equal{#1}{bie}}{ㄅㄧㄝ}{%
+\ifthenelse{\equal{#1}{pie}}{ㄆㄧㄝ}{%
+\ifthenelse{\equal{#1}{mie}}{ㄇㄧㄝ}{%
+\ifthenelse{\equal{#1}{die}}{ㄉㄧㄝ}{%
+\ifthenelse{\equal{#1}{tie}}{ㄊㄧㄝ}{%
+\ifthenelse{\equal{#1}{nie}}{ㄋㄧㄝ}{%
+\ifthenelse{\equal{#1}{lie}}{ㄌㄧㄝ}{%
+\ifthenelse{\equal{#1}{jie}}{ㄐㄧㄝ}{%
+\ifthenelse{\equal{#1}{qie}}{ㄑㄧㄝ}{%
+\ifthenelse{\equal{#1}{xie}}{ㄒㄧㄝ}{%
 %
-	\ifthenelse{\equal{#1}{yao}}{ㄧㄠ}{
-	\ifthenelse{\equal{#1}{biao}}{ㄅㄧㄠ}{
-	\ifthenelse{\equal{#1}{piao}}{ㄆㄧㄠ}{
-	\ifthenelse{\equal{#1}{miao}}{ㄇㄧㄠ}{
-	\ifthenelse{\equal{#1}{diao}}{ㄉㄧㄠ}{
-	\ifthenelse{\equal{#1}{tiao}}{ㄊㄧㄠ}{
-	\ifthenelse{\equal{#1}{niao}}{ㄋㄧㄠ}{
-	\ifthenelse{\equal{#1}{liao}}{ㄌㄧㄠ}{
-	\ifthenelse{\equal{#1}{jiao}}{ㄐㄧㄠ}{
-	\ifthenelse{\equal{#1}{qiao}}{ㄑㄧㄠ}{
-	\ifthenelse{\equal{#1}{xiao}}{ㄒㄧㄠ}{%
+\ifthenelse{\equal{#1}{yao}}{ㄧㄠ}{%
+\ifthenelse{\equal{#1}{biao}}{ㄅㄧㄠ}{%
+\ifthenelse{\equal{#1}{piao}}{ㄆㄧㄠ}{%
+\ifthenelse{\equal{#1}{miao}}{ㄇㄧㄠ}{%
+\ifthenelse{\equal{#1}{diao}}{ㄉㄧㄠ}{%
+\ifthenelse{\equal{#1}{tiao}}{ㄊㄧㄠ}{%
+\ifthenelse{\equal{#1}{niao}}{ㄋㄧㄠ}{%
+\ifthenelse{\equal{#1}{liao}}{ㄌㄧㄠ}{%
+\ifthenelse{\equal{#1}{jiao}}{ㄐㄧㄠ}{%
+\ifthenelse{\equal{#1}{qiao}}{ㄑㄧㄠ}{%
+\ifthenelse{\equal{#1}{xiao}}{ㄒㄧㄠ}{%
 %
-	\ifthenelse{\equal{#1}{you}}{ㄧㄡ}{
-	\ifthenelse{\equal{#1}{miu}}{ㄇㄧㄡ}{
-	\ifthenelse{\equal{#1}{diu}}{ㄉㄧㄡ}{
-	\ifthenelse{\equal{#1}{niu}}{ㄋㄧㄡ}{
-	\ifthenelse{\equal{#1}{liu}}{ㄌㄧㄡ}{
-	\ifthenelse{\equal{#1}{jiu}}{ㄐㄧㄡ}{
-	\ifthenelse{\equal{#1}{qiu}}{ㄑㄧㄡ}{
-	\ifthenelse{\equal{#1}{xiu}}{ㄒㄧㄡ}{%
+\ifthenelse{\equal{#1}{you}}{ㄧㄡ}{%
+\ifthenelse{\equal{#1}{miu}}{ㄇㄧㄡ}{%
+\ifthenelse{\equal{#1}{diu}}{ㄉㄧㄡ}{%
+\ifthenelse{\equal{#1}{niu}}{ㄋㄧㄡ}{%
+\ifthenelse{\equal{#1}{liu}}{ㄌㄧㄡ}{%
+\ifthenelse{\equal{#1}{jiu}}{ㄐㄧㄡ}{%
+\ifthenelse{\equal{#1}{qiu}}{ㄑㄧㄡ}{%
+\ifthenelse{\equal{#1}{xiu}}{ㄒㄧㄡ}{%
 %
-	\ifthenelse{\equal{#1}{yan}}{ㄧㄢ}{
-	\ifthenelse{\equal{#1}{bian}}{ㄅㄧㄢ}{
-	\ifthenelse{\equal{#1}{pian}}{ㄆㄧㄢ}{
-	\ifthenelse{\equal{#1}{mian}}{ㄇㄧㄢ}{
-	\ifthenelse{\equal{#1}{dian}}{ㄉㄧㄢ}{
-	\ifthenelse{\equal{#1}{tian}}{ㄊㄧㄢ}{
-	\ifthenelse{\equal{#1}{nian}}{ㄋㄧㄢ}{
-	\ifthenelse{\equal{#1}{lian}}{ㄌㄧㄢ}{
-	\ifthenelse{\equal{#1}{jian}}{ㄐㄧㄢ}{
-	\ifthenelse{\equal{#1}{qian}}{ㄑㄧㄢ}{
-	\ifthenelse{\equal{#1}{xian}}{ㄒㄧㄢ}{%
+\ifthenelse{\equal{#1}{yan}}{ㄧㄢ}{%
+\ifthenelse{\equal{#1}{bian}}{ㄅㄧㄢ}{%
+\ifthenelse{\equal{#1}{pian}}{ㄆㄧㄢ}{%
+\ifthenelse{\equal{#1}{mian}}{ㄇㄧㄢ}{%
+\ifthenelse{\equal{#1}{dian}}{ㄉㄧㄢ}{%
+\ifthenelse{\equal{#1}{tian}}{ㄊㄧㄢ}{%
+\ifthenelse{\equal{#1}{nian}}{ㄋㄧㄢ}{%
+\ifthenelse{\equal{#1}{lian}}{ㄌㄧㄢ}{%
+\ifthenelse{\equal{#1}{jian}}{ㄐㄧㄢ}{%
+\ifthenelse{\equal{#1}{qian}}{ㄑㄧㄢ}{%
+\ifthenelse{\equal{#1}{xian}}{ㄒㄧㄢ}{%
 %
-	\ifthenelse{\equal{#1}{yin}}{ㄧㄣ}{
-	\ifthenelse{\equal{#1}{bin}}{ㄅㄧㄣ}{
-	\ifthenelse{\equal{#1}{pin}}{ㄆㄧㄣ}{
-	\ifthenelse{\equal{#1}{min}}{ㄇㄧㄣ}{
-	\ifthenelse{\equal{#1}{nin}}{ㄋㄧㄣ}{
-	\ifthenelse{\equal{#1}{lin}}{ㄌㄧㄣ}{
-	\ifthenelse{\equal{#1}{jin}}{ㄐㄧㄣ}{
-	\ifthenelse{\equal{#1}{qin}}{ㄑㄧㄣ}{
-	\ifthenelse{\equal{#1}{xin}}{ㄒㄧㄣ}{%
+\ifthenelse{\equal{#1}{yin}}{ㄧㄣ}{%
+\ifthenelse{\equal{#1}{bin}}{ㄅㄧㄣ}{%
+\ifthenelse{\equal{#1}{pin}}{ㄆㄧㄣ}{%
+\ifthenelse{\equal{#1}{min}}{ㄇㄧㄣ}{%
+\ifthenelse{\equal{#1}{nin}}{ㄋㄧㄣ}{%
+\ifthenelse{\equal{#1}{lin}}{ㄌㄧㄣ}{%
+\ifthenelse{\equal{#1}{jin}}{ㄐㄧㄣ}{%
+\ifthenelse{\equal{#1}{qin}}{ㄑㄧㄣ}{%
+\ifthenelse{\equal{#1}{xin}}{ㄒㄧㄣ}{%
 %
-	\ifthenelse{\equal{#1}{yang}}{ㄧㄤ}{
-	\ifthenelse{\equal{#1}{niang}}{ㄋㄧㄤ}{
-	\ifthenelse{\equal{#1}{liang}}{ㄌㄧㄤ}{
-	\ifthenelse{\equal{#1}{jiang}}{ㄐㄧㄤ}{
-	\ifthenelse{\equal{#1}{qiang}}{ㄑㄧㄤ}{
-	\ifthenelse{\equal{#1}{xiang}}{ㄒㄧㄤ}{%
+\ifthenelse{\equal{#1}{yang}}{ㄧㄤ}{%
+\ifthenelse{\equal{#1}{niang}}{ㄋㄧㄤ}{%
+\ifthenelse{\equal{#1}{liang}}{ㄌㄧㄤ}{%
+\ifthenelse{\equal{#1}{jiang}}{ㄐㄧㄤ}{%
+\ifthenelse{\equal{#1}{qiang}}{ㄑㄧㄤ}{%
+\ifthenelse{\equal{#1}{xiang}}{ㄒㄧㄤ}{%
 %
-	\ifthenelse{\equal{#1}{ying}}{ㄧㄥ}{
-	\ifthenelse{\equal{#1}{bing}}{ㄅㄧㄥ}{
-	\ifthenelse{\equal{#1}{ping}}{ㄆㄧㄥ}{
-	\ifthenelse{\equal{#1}{ming}}{ㄇㄧㄥ}{
-	\ifthenelse{\equal{#1}{ding}}{ㄉㄧㄥ}{
-	\ifthenelse{\equal{#1}{ting}}{ㄊㄧㄥ}{
-	\ifthenelse{\equal{#1}{ning}}{ㄋㄧㄥ}{
-	\ifthenelse{\equal{#1}{ling}}{ㄌㄧㄥ}{
-	\ifthenelse{\equal{#1}{jing}}{ㄐㄧㄥ}{
-	\ifthenelse{\equal{#1}{qing}}{ㄑㄧㄥ}{
-	\ifthenelse{\equal{#1}{xing}}{ㄒㄧㄥ}{%
+\ifthenelse{\equal{#1}{ying}}{ㄧㄥ}{%
+\ifthenelse{\equal{#1}{bing}}{ㄅㄧㄥ}{%
+\ifthenelse{\equal{#1}{ping}}{ㄆㄧㄥ}{%
+\ifthenelse{\equal{#1}{ming}}{ㄇㄧㄥ}{%
+\ifthenelse{\equal{#1}{ding}}{ㄉㄧㄥ}{%
+\ifthenelse{\equal{#1}{ting}}{ㄊㄧㄥ}{%
+\ifthenelse{\equal{#1}{ning}}{ㄋㄧㄥ}{%
+\ifthenelse{\equal{#1}{ling}}{ㄌㄧㄥ}{%
+\ifthenelse{\equal{#1}{jing}}{ㄐㄧㄥ}{%
+\ifthenelse{\equal{#1}{qing}}{ㄑㄧㄥ}{%
+\ifthenelse{\equal{#1}{xing}}{ㄒㄧㄥ}{%
 %
-	\ifthenelse{\equal{#1}{wu}}{ㄨ}{
-	\ifthenelse{\equal{#1}{bu}}{ㄅㄨ}{
-	\ifthenelse{\equal{#1}{pu}}{ㄆㄨ}{
-	\ifthenelse{\equal{#1}{mu}}{ㄇㄨ}{
-	\ifthenelse{\equal{#1}{fu}}{ㄈㄨ}{
-	\ifthenelse{\equal{#1}{du}}{ㄉㄨ}{
-	\ifthenelse{\equal{#1}{tu}}{ㄊㄨ}{
-	\ifthenelse{\equal{#1}{nu}}{ㄋㄨ}{
-	\ifthenelse{\equal{#1}{lu}}{ㄌㄨ}{
-	\ifthenelse{\equal{#1}{gu}}{ㄍㄨ}{
-	\ifthenelse{\equal{#1}{ku}}{ㄎㄨ}{
-	\ifthenelse{\equal{#1}{hu}}{ㄏㄨ}{
-	\ifthenelse{\equal{#1}{zhu}}{ㄓㄨ}{
-	\ifthenelse{\equal{#1}{chu}}{ㄔㄨ}{
-	\ifthenelse{\equal{#1}{shu}}{ㄕㄨ}{
-	\ifthenelse{\equal{#1}{ru}}{ㄖㄨ}{
-	\ifthenelse{\equal{#1}{zu}}{ㄗㄨ}{
-	\ifthenelse{\equal{#1}{cu}}{ㄘㄨ}{
-	\ifthenelse{\equal{#1}{su}}{ㄙㄨ}{%
+\ifthenelse{\equal{#1}{wu}}{ㄨ}{%
+\ifthenelse{\equal{#1}{bu}}{ㄅㄨ}{%
+\ifthenelse{\equal{#1}{pu}}{ㄆㄨ}{%
+\ifthenelse{\equal{#1}{mu}}{ㄇㄨ}{%
+\ifthenelse{\equal{#1}{fu}}{ㄈㄨ}{%
+\ifthenelse{\equal{#1}{du}}{ㄉㄨ}{%
+\ifthenelse{\equal{#1}{tu}}{ㄊㄨ}{%
+\ifthenelse{\equal{#1}{nu}}{ㄋㄨ}{%
+\ifthenelse{\equal{#1}{lu}}{ㄌㄨ}{%
+\ifthenelse{\equal{#1}{gu}}{ㄍㄨ}{%
+\ifthenelse{\equal{#1}{ku}}{ㄎㄨ}{%
+\ifthenelse{\equal{#1}{hu}}{ㄏㄨ}{%
+\ifthenelse{\equal{#1}{zhu}}{ㄓㄨ}{%
+\ifthenelse{\equal{#1}{chu}}{ㄔㄨ}{%
+\ifthenelse{\equal{#1}{shu}}{ㄕㄨ}{%
+\ifthenelse{\equal{#1}{ru}}{ㄖㄨ}{%
+\ifthenelse{\equal{#1}{zu}}{ㄗㄨ}{%
+\ifthenelse{\equal{#1}{cu}}{ㄘㄨ}{%
+\ifthenelse{\equal{#1}{su}}{ㄙㄨ}{%
 %
-	\ifthenelse{\equal{#1}{wa}}{ㄨㄚ}{
-	\ifthenelse{\equal{#1}{gua}}{ㄍㄨㄚ}{
-	\ifthenelse{\equal{#1}{kua}}{ㄎㄨㄚ}{
-	\ifthenelse{\equal{#1}{hua}}{ㄏㄨㄚ}{
-	\ifthenelse{\equal{#1}{zhua}}{ㄓㄨㄚ}{
-	\ifthenelse{\equal{#1}{chua}}{ㄔㄨㄚ}{
-	\ifthenelse{\equal{#1}{shua}}{ㄕㄨㄚ}{%
+\ifthenelse{\equal{#1}{wa}}{ㄨㄚ}{%
+\ifthenelse{\equal{#1}{gua}}{ㄍㄨㄚ}{%
+\ifthenelse{\equal{#1}{kua}}{ㄎㄨㄚ}{%
+\ifthenelse{\equal{#1}{hua}}{ㄏㄨㄚ}{%
+\ifthenelse{\equal{#1}{zhua}}{ㄓㄨㄚ}{%
+\ifthenelse{\equal{#1}{chua}}{ㄔㄨㄚ}{%
+\ifthenelse{\equal{#1}{shua}}{ㄕㄨㄚ}{%
 %
-	\ifthenelse{\equal{#1}{wo}}{ㄨㄛ}{
-	\ifthenelse{\equal{#1}{duo}}{ㄉㄨㄛ}{
-	\ifthenelse{\equal{#1}{tuo}}{ㄊㄨㄛ}{
-	\ifthenelse{\equal{#1}{nuo}}{ㄋㄨㄛ}{
-	\ifthenelse{\equal{#1}{luo}}{ㄌㄨㄛ}{
-	\ifthenelse{\equal{#1}{guo}}{ㄍㄨㄛ}{
-	\ifthenelse{\equal{#1}{kuo}}{ㄎㄨㄛ}{
-	\ifthenelse{\equal{#1}{huo}}{ㄏㄨㄛ}{
-	\ifthenelse{\equal{#1}{zhuo}}{ㄓㄨㄛ}{
-	\ifthenelse{\equal{#1}{chuo}}{ㄔㄨㄛ}{
-	\ifthenelse{\equal{#1}{shuo}}{ㄕㄨㄛ}{
-	\ifthenelse{\equal{#1}{ruo}}{ㄖㄨㄛ}{
-	\ifthenelse{\equal{#1}{zuo}}{ㄗㄨㄛ}{
-	\ifthenelse{\equal{#1}{cuo}}{ㄘㄨㄛ}{
-	\ifthenelse{\equal{#1}{suo}}{ㄙㄨㄛ}{%
+\ifthenelse{\equal{#1}{wo}}{ㄨㄛ}{%
+\ifthenelse{\equal{#1}{duo}}{ㄉㄨㄛ}{%
+\ifthenelse{\equal{#1}{tuo}}{ㄊㄨㄛ}{%
+\ifthenelse{\equal{#1}{nuo}}{ㄋㄨㄛ}{%
+\ifthenelse{\equal{#1}{luo}}{ㄌㄨㄛ}{%
+\ifthenelse{\equal{#1}{guo}}{ㄍㄨㄛ}{%
+\ifthenelse{\equal{#1}{kuo}}{ㄎㄨㄛ}{%
+\ifthenelse{\equal{#1}{huo}}{ㄏㄨㄛ}{%
+\ifthenelse{\equal{#1}{zhuo}}{ㄓㄨㄛ}{%
+\ifthenelse{\equal{#1}{chuo}}{ㄔㄨㄛ}{%
+\ifthenelse{\equal{#1}{shuo}}{ㄕㄨㄛ}{%
+\ifthenelse{\equal{#1}{ruo}}{ㄖㄨㄛ}{%
+\ifthenelse{\equal{#1}{zuo}}{ㄗㄨㄛ}{%
+\ifthenelse{\equal{#1}{cuo}}{ㄘㄨㄛ}{%
+\ifthenelse{\equal{#1}{suo}}{ㄙㄨㄛ}{%
 %
-	\ifthenelse{\equal{#1}{wai}}{ㄨㄞ}{
-	\ifthenelse{\equal{#1}{guai}}{ㄍㄨㄞ}{
-	\ifthenelse{\equal{#1}{kuai}}{ㄎㄨㄞ}{
-	\ifthenelse{\equal{#1}{huai}}{ㄏㄨㄞ}{
-	\ifthenelse{\equal{#1}{zhuai}}{ㄓㄨㄞ}{
-	\ifthenelse{\equal{#1}{chuai}}{ㄔㄨㄞ}{
-	\ifthenelse{\equal{#1}{shuai}}{ㄕㄨㄞ}{%
+\ifthenelse{\equal{#1}{wai}}{ㄨㄞ}{%
+\ifthenelse{\equal{#1}{guai}}{ㄍㄨㄞ}{%
+\ifthenelse{\equal{#1}{kuai}}{ㄎㄨㄞ}{%
+\ifthenelse{\equal{#1}{huai}}{ㄏㄨㄞ}{%
+\ifthenelse{\equal{#1}{zhuai}}{ㄓㄨㄞ}{%
+\ifthenelse{\equal{#1}{chuai}}{ㄔㄨㄞ}{%
+\ifthenelse{\equal{#1}{shuai}}{ㄕㄨㄞ}{%
 %
-	\ifthenelse{\equal{#1}{wei}}{ㄨㄟ}{
-	\ifthenelse{\equal{#1}{dui}}{ㄉㄨㄟ}{
-	\ifthenelse{\equal{#1}{tui}}{ㄊㄨㄟ}{
-	\ifthenelse{\equal{#1}{gui}}{ㄍㄨㄟ}{
-	\ifthenelse{\equal{#1}{kui}}{ㄎㄨㄟ}{
-	\ifthenelse{\equal{#1}{hui}}{ㄏㄨㄟ}{
-	\ifthenelse{\equal{#1}{zhui}}{ㄓㄨㄟ}{
-	\ifthenelse{\equal{#1}{chui}}{ㄔㄨㄟ}{
-	\ifthenelse{\equal{#1}{shui}}{ㄕㄨㄟ}{
-	\ifthenelse{\equal{#1}{rui}}{ㄖㄨㄟ}{
-	\ifthenelse{\equal{#1}{zui}}{ㄗㄨㄟ}{
-	\ifthenelse{\equal{#1}{cui}}{ㄘㄨㄟ}{
-	\ifthenelse{\equal{#1}{sui}}{ㄙㄨㄟ}{%
+\ifthenelse{\equal{#1}{wei}}{ㄨㄟ}{%
+\ifthenelse{\equal{#1}{dui}}{ㄉㄨㄟ}{%
+\ifthenelse{\equal{#1}{tui}}{ㄊㄨㄟ}{%
+\ifthenelse{\equal{#1}{gui}}{ㄍㄨㄟ}{%
+\ifthenelse{\equal{#1}{kui}}{ㄎㄨㄟ}{%
+\ifthenelse{\equal{#1}{hui}}{ㄏㄨㄟ}{%
+\ifthenelse{\equal{#1}{zhui}}{ㄓㄨㄟ}{%
+\ifthenelse{\equal{#1}{chui}}{ㄔㄨㄟ}{%
+\ifthenelse{\equal{#1}{shui}}{ㄕㄨㄟ}{%
+\ifthenelse{\equal{#1}{rui}}{ㄖㄨㄟ}{%
+\ifthenelse{\equal{#1}{zui}}{ㄗㄨㄟ}{%
+\ifthenelse{\equal{#1}{cui}}{ㄘㄨㄟ}{%
+\ifthenelse{\equal{#1}{sui}}{ㄙㄨㄟ}{%
 %
-	\ifthenelse{\equal{#1}{wan}}{ㄨㄢ}{
-	\ifthenelse{\equal{#1}{duan}}{ㄉㄨㄢ}{
-	\ifthenelse{\equal{#1}{tuan}}{ㄊㄨㄢ}{
-	\ifthenelse{\equal{#1}{nuan}}{ㄋㄨㄢ}{
-	\ifthenelse{\equal{#1}{luan}}{ㄌㄨㄢ}{
-	\ifthenelse{\equal{#1}{guan}}{ㄍㄨㄢ}{
-	\ifthenelse{\equal{#1}{kuan}}{ㄎㄨㄢ}{
-	\ifthenelse{\equal{#1}{huan}}{ㄏㄨㄢ}{
-	\ifthenelse{\equal{#1}{zhuan}}{ㄓㄨㄢ}{
-	\ifthenelse{\equal{#1}{chuan}}{ㄔㄨㄢ}{
-	\ifthenelse{\equal{#1}{shuan}}{ㄕㄨㄢ}{
-	\ifthenelse{\equal{#1}{ruan}}{ㄖㄨㄢ}{
-	\ifthenelse{\equal{#1}{zuan}}{ㄗㄨㄢ}{
-	\ifthenelse{\equal{#1}{cuan}}{ㄘㄨㄢ}{
-	\ifthenelse{\equal{#1}{suan}}{ㄙㄨㄢ}{%
+\ifthenelse{\equal{#1}{wan}}{ㄨㄢ}{%
+\ifthenelse{\equal{#1}{duan}}{ㄉㄨㄢ}{%
+\ifthenelse{\equal{#1}{tuan}}{ㄊㄨㄢ}{%
+\ifthenelse{\equal{#1}{nuan}}{ㄋㄨㄢ}{%
+\ifthenelse{\equal{#1}{luan}}{ㄌㄨㄢ}{%
+\ifthenelse{\equal{#1}{guan}}{ㄍㄨㄢ}{%
+\ifthenelse{\equal{#1}{kuan}}{ㄎㄨㄢ}{%
+\ifthenelse{\equal{#1}{huan}}{ㄏㄨㄢ}{%
+\ifthenelse{\equal{#1}{zhuan}}{ㄓㄨㄢ}{%
+\ifthenelse{\equal{#1}{chuan}}{ㄔㄨㄢ}{%
+\ifthenelse{\equal{#1}{shuan}}{ㄕㄨㄢ}{%
+\ifthenelse{\equal{#1}{ruan}}{ㄖㄨㄢ}{%
+\ifthenelse{\equal{#1}{zuan}}{ㄗㄨㄢ}{%
+\ifthenelse{\equal{#1}{cuan}}{ㄘㄨㄢ}{%
+\ifthenelse{\equal{#1}{suan}}{ㄙㄨㄢ}{%
 %
-	\ifthenelse{\equal{#1}{wen}}{ㄨㄣ}{
-	\ifthenelse{\equal{#1}{dun}}{ㄉㄨㄣ}{
-	\ifthenelse{\equal{#1}{tun}}{ㄊㄨㄣ}{
-	\ifthenelse{\equal{#1}{lun}}{ㄌㄨㄣ}{
-	\ifthenelse{\equal{#1}{gun}}{ㄍㄨㄣ}{
-	\ifthenelse{\equal{#1}{kun}}{ㄎㄨㄣ}{
-	\ifthenelse{\equal{#1}{hun}}{ㄏㄨㄣ}{
-	\ifthenelse{\equal{#1}{zhun}}{ㄓㄨ}{
-	\ifthenelse{\equal{#1}{chun}}{ㄔㄨ}{
-	\ifthenelse{\equal{#1}{shun}}{ㄕㄨ}{
-	\ifthenelse{\equal{#1}{run}}{ㄖㄨㄣ}{
-	\ifthenelse{\equal{#1}{zun}}{ㄗㄨㄣ}{
-	\ifthenelse{\equal{#1}{cun}}{ㄘㄨㄣ}{
-	\ifthenelse{\equal{#1}{sun}}{ㄙㄨㄣ}{
+\ifthenelse{\equal{#1}{wen}}{ㄨㄣ}{%
+\ifthenelse{\equal{#1}{dun}}{ㄉㄨㄣ}{%
+\ifthenelse{\equal{#1}{tun}}{ㄊㄨㄣ}{%
+\ifthenelse{\equal{#1}{lun}}{ㄌㄨㄣ}{%
+\ifthenelse{\equal{#1}{gun}}{ㄍㄨㄣ}{%
+\ifthenelse{\equal{#1}{kun}}{ㄎㄨㄣ}{%
+\ifthenelse{\equal{#1}{hun}}{ㄏㄨㄣ}{%
+\ifthenelse{\equal{#1}{zhun}}{ㄓㄨ}{%
+\ifthenelse{\equal{#1}{chun}}{ㄔㄨ}{%
+\ifthenelse{\equal{#1}{shun}}{ㄕㄨ}{%
+\ifthenelse{\equal{#1}{run}}{ㄖㄨㄣ}{%
+\ifthenelse{\equal{#1}{zun}}{ㄗㄨㄣ}{%
+\ifthenelse{\equal{#1}{cun}}{ㄘㄨㄣ}{%
+\ifthenelse{\equal{#1}{sun}}{ㄙㄨㄣ}{%
 %
-	\ifthenelse{\equal{#1}{wang}}{ㄨㄤ}{
-	\ifthenelse{\equal{#1}{guang}}{ㄍㄨㄤ}{
-	\ifthenelse{\equal{#1}{kuang}}{ㄎㄨㄤ}{
-	\ifthenelse{\equal{#1}{huang}}{ㄏㄨㄤ}{
-	\ifthenelse{\equal{#1}{zhuang}}{ㄓㄨㄤ}{
-	\ifthenelse{\equal{#1}{chuang}}{ㄔㄨㄤ}{
-	\ifthenelse{\equal{#1}{shuang}}{ㄕㄨㄤ}{
+\ifthenelse{\equal{#1}{wang}}{ㄨㄤ}{%
+\ifthenelse{\equal{#1}{guang}}{ㄍㄨㄤ}{%
+\ifthenelse{\equal{#1}{kuang}}{ㄎㄨㄤ}{%
+\ifthenelse{\equal{#1}{huang}}{ㄏㄨㄤ}{%
+\ifthenelse{\equal{#1}{zhuang}}{ㄓㄨㄤ}{%
+\ifthenelse{\equal{#1}{chuang}}{ㄔㄨㄤ}{%
+\ifthenelse{\equal{#1}{shuang}}{ㄕㄨㄤ}{%
 %
-	\ifthenelse{\equal{#1}{dong}}{ㄉㄨㄥ}{
-	\ifthenelse{\equal{#1}{tong}}{ㄊㄨㄥ}{
-	\ifthenelse{\equal{#1}{nong}}{ㄋㄨㄥ}{
-	\ifthenelse{\equal{#1}{long}}{ㄌㄨㄥ}{
-	\ifthenelse{\equal{#1}{gong}}{ㄍㄨㄥ}{
-	\ifthenelse{\equal{#1}{kong}}{ㄎㄨㄥ}{
-	\ifthenelse{\equal{#1}{hong}}{ㄏㄨㄥ}{
-	\ifthenelse{\equal{#1}{zhong}}{ㄓㄨㄥ}{
-	\ifthenelse{\equal{#1}{chong}}{ㄔㄨㄥ}{
-	\ifthenelse{\equal{#1}{rong}}{ㄖㄨㄥ}{
-	\ifthenelse{\equal{#1}{zong}}{ㄗㄨㄥ}{
-	\ifthenelse{\equal{#1}{cong}}{ㄘㄨㄥ}{
-	\ifthenelse{\equal{#1}{song}}{ㄙㄨㄥ}{
+\ifthenelse{\equal{#1}{dong}}{ㄉㄨㄥ}{%
+\ifthenelse{\equal{#1}{tong}}{ㄊㄨㄥ}{%
+\ifthenelse{\equal{#1}{nong}}{ㄋㄨㄥ}{%
+\ifthenelse{\equal{#1}{long}}{ㄌㄨㄥ}{%
+\ifthenelse{\equal{#1}{gong}}{ㄍㄨㄥ}{%
+\ifthenelse{\equal{#1}{kong}}{ㄎㄨㄥ}{%
+\ifthenelse{\equal{#1}{hong}}{ㄏㄨㄥ}{%
+\ifthenelse{\equal{#1}{zhong}}{ㄓㄨㄥ}{%
+\ifthenelse{\equal{#1}{chong}}{ㄔㄨㄥ}{%
+\ifthenelse{\equal{#1}{rong}}{ㄖㄨㄥ}{%
+\ifthenelse{\equal{#1}{zong}}{ㄗㄨㄥ}{%
+\ifthenelse{\equal{#1}{cong}}{ㄘㄨㄥ}{%
+\ifthenelse{\equal{#1}{song}}{ㄙㄨㄥ}{%
 %
-	\ifthenelse{\equal{#1}{yu}}{ㄩ}{
-	\ifthenelse{\equal{#1}{nv}}{ㄋㄩ}{
-	\ifthenelse{\equal{#1}{lv}}{ㄌㄩ}{
-	\ifthenelse{\equal{#1}{ju}}{ㄐㄩ}{
-	\ifthenelse{\equal{#1}{qu}}{ㄑㄩ}{
-	\ifthenelse{\equal{#1}{xu}}{ㄒㄩ}{%
+\ifthenelse{\equal{#1}{yu}}{ㄩ}{%
+\ifthenelse{\equal{#1}{nv}}{ㄋㄩ}{%
+\ifthenelse{\equal{#1}{lv}}{ㄌㄩ}{%
+\ifthenelse{\equal{#1}{ju}}{ㄐㄩ}{%
+\ifthenelse{\equal{#1}{qu}}{ㄑㄩ}{%
+\ifthenelse{\equal{#1}{xu}}{ㄒㄩ}{%
 %
-	\ifthenelse{\equal{#1}{yue}}{ㄩㄝ}{
-	\ifthenelse{\equal{#1}{nve}}{ㄋㄩㄝ}{
-	\ifthenelse{\equal{#1}{lve}}{ㄌㄩㄝ}{
-	\ifthenelse{\equal{#1}{jue}}{ㄐㄩㄝ}{
-	\ifthenelse{\equal{#1}{que}}{ㄑㄩㄝ}{
-	\ifthenelse{\equal{#1}{xue}}{ㄒㄩㄝ}{%
+\ifthenelse{\equal{#1}{yue}}{ㄩㄝ}{%
+\ifthenelse{\equal{#1}{nve}}{ㄋㄩㄝ}{%
+\ifthenelse{\equal{#1}{lve}}{ㄌㄩㄝ}{%
+\ifthenelse{\equal{#1}{jue}}{ㄐㄩㄝ}{%
+\ifthenelse{\equal{#1}{que}}{ㄑㄩㄝ}{%
+\ifthenelse{\equal{#1}{xue}}{ㄒㄩㄝ}{%
 %
-	\ifthenelse{\equal{#1}{yuan}}{ㄩㄢ}{
-	\ifthenelse{\equal{#1}{juan}}{ㄐㄩㄢ}{
-	\ifthenelse{\equal{#1}{quan}}{ㄑㄩㄢ}{
-	\ifthenelse{\equal{#1}{xuan}}{ㄒㄩㄢ}{%
+\ifthenelse{\equal{#1}{yuan}}{ㄩㄢ}{%
+\ifthenelse{\equal{#1}{juan}}{ㄐㄩㄢ}{%
+\ifthenelse{\equal{#1}{quan}}{ㄑㄩㄢ}{%
+\ifthenelse{\equal{#1}{xuan}}{ㄒㄩㄢ}{%
 %
-	\ifthenelse{\equal{#1}{yun}}{ㄩㄣ}{
-	\ifthenelse{\equal{#1}{lvn}}{ㄌㄩㄣ}{
-	\ifthenelse{\equal{#1}{jun}}{ㄐㄩㄣ}{
-	\ifthenelse{\equal{#1}{qun}}{ㄑㄩㄣ}{
-	\ifthenelse{\equal{#1}{xun}}{ㄒㄩㄣ}{%
+\ifthenelse{\equal{#1}{yun}}{ㄩㄣ}{%
+\ifthenelse{\equal{#1}{lvn}}{ㄌㄩㄣ}{%
+\ifthenelse{\equal{#1}{jun}}{ㄐㄩㄣ}{%
+\ifthenelse{\equal{#1}{qun}}{ㄑㄩㄣ}{%
+\ifthenelse{\equal{#1}{xun}}{ㄒㄩㄣ}{%
 %
-	\ifthenelse{\equal{#1}{yong}}{ㄩㄥ}{
-	\ifthenelse{\equal{#1}{jiong}}{ㄐㄩㄥ}{
-	\ifthenelse{\equal{#1}{qiong}}{ㄑㄩㄥ}{
-	\ifthenelse{\equal{#1}{xiong}}{ㄒㄩㄥ}{%
+\ifthenelse{\equal{#1}{yong}}{ㄩㄥ}{%
+\ifthenelse{\equal{#1}{jiong}}{ㄐㄩㄥ}{%
+\ifthenelse{\equal{#1}{qiong}}{ㄑㄩㄥ}{%
+\ifthenelse{\equal{#1}{xiong}}{ㄒㄩㄥ}{%
 %
-	undef
-	}}}}%iong
-	}}}}}%vn
-	}}}}%van
-	}}}}}}%ve
-	}}}}}}%v
-	}}}}}}}}}}}}}%ong
-	}}}}}}}%uang
-	}}}}}}}}}}}}}}%un
-	}}}}}}}}}}}}}}}%uan
-	}}}}}}}}}}}}}%ui
-	}}}}}}}%uai
-	}}}}}}}}}}}}}}}%uo
-	}}}}}}}%ua
-	}}}}}}}}}}}}}}}}}}}%u
-	}}}}}}}}}}}%ing
-	}}}}}}%iang
-	}}}}}}}}}%in
-	}}}}}}}}}}}%ian
-	}}}}}}}}%ou
-	}}}}}}}}}}}%iao
-	}}}}}}}}}}}%ie
-	}}}}}}%ia
-	}}}}}}}}}}}%i
-	}%er
-	}}}}}}}}}}}}}}}}}}}%eng
-	}}}}}}}}}}}}}}}}}}}%ang
-	}}}}}}}}}}}}}}}}%en
-	}}}}}}}}}}}}}}}}}}}%an
-	}}}}}}}}}}}}}}}}}}%ou
-	}}}}}}}}}}}}}}}}}}%ao
-	}}}}}}}}}}}}}%ei
-	}}}}}}}}}}}}}}}}}%ai
-	}}}}}}}}}}}}}}}}%e
-	}}}}}}%o
-	}}}}}}}}}}}}}}}}}}%a
-	}}}}}}}%i
+undef%
+}}}}%iong
+}}}}}%vn
+}}}}%van
+}}}}}}%ve
+}}}}}}%v
+}}}}}}}}}}}}}%ong
+}}}}}}}%uang
+}}}}}}}}}}}}}}%un
+}}}}}}}}}}}}}}}%uan
+}}}}}}}}}}}}}%ui
+}}}}}}}%uai
+}}}}}}}}}}}}}}}%uo
+}}}}}}}%ua
+}}}}}}}}}}}}}}}}}}}%u
+}}}}}}}}}}}%ing
+}}}}}}%iang
+}}}}}}}}}%in
+}}}}}}}}}}}%ian
+}}}}}}}}%ou
+}}}}}}}}}}}%iao
+}}}}}}}}}}}%ie
+}}}}}}%ia
+}}}}}}}}}}}%i
+}%er
+}}}}}}}}}}}}}}}}}}}%eng
+}}}}}}}}}}}}}}}}}}}%ang
+}}}}}}}}}}}}}}}}%en
+}}}}}}}}}}}}}}}}}}}%an
+}}}}}}}}}}}}}}}}}}%ou
+}}}}}}}}}}}}}}}}}}%ao
+}}}}}}}}}}}}}%ei
+}}}}}}}}}}}}}}}}}%ai
+}}}}}}}}}}}}}}}}%e
+}}}}}}%o
+}}}}}}}}}}}}}}}}}}%a
+}}}}}}}%i
+%
+\ifthenelse{\equal{#2}{1}}{}{%
+\ifthenelse{\equal{#2}{2}}{\textsuperscript{ˊ}}{%
+\ifthenelse{\equal{#2}{3}}{ˇ}{%
+\ifthenelse{\equal{#2}{4}}{\textsuperscript{ˋ}}{%
+\ifthenelse{\equal{#2}{5}}{˙}{%
+undef%
+}}}}}%
 }
