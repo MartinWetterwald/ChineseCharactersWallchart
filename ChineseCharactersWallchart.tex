@@ -13,24 +13,24 @@
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{ifthen}
 
-\newcommand{\zhchar}[4]
-{%
+\newcommand{\zhchar}[4]{%
 	\begin{minipage}[c][71pt][c]{65pt}
 		\centering
-		\vbox to 39pt {\vfill \fontsize{45pt}{45pt}\selectfont
-		\ifthenelse{\equal{#3}{1}}{\color{red}}{}
-		\ifthenelse{\equal{#3}{2}}{\color{LimeGreen}}{}
-		\ifthenelse{\equal{#3}{3}}{\color{blue}}{}
-		\ifthenelse{\equal{#3}{4}}{\color{Magenta}}{}
-		\ifthenelse{\equal{#3}{5}}{\color{gray}}{}
-		#1}
-		\fontsize{10pt}{10pt}\selectfont \zhuyin{#2}{#3}\\
+		\vbox to 33pt {\vfill\begin{tabular}{@{}p{45pt}@{}c@{}}
+			\fontsize{45pt}{45pt}\selectfont%
+			\ifthenelse{\equal{#3}{1}}{\color{red}}{}%
+			\ifthenelse{\equal{#3}{2}}{\color{LimeGreen}}{}%
+			\ifthenelse{\equal{#3}{3}}{\color{blue}}{}%
+			\ifthenelse{\equal{#3}{4}}{\color{Magenta}}{}%
+			\ifthenelse{\equal{#3}{5}}{\color{gray}}{}%
+			#1 & \fontsize{8pt}{0pt}\selectfont \parbox[t]{0pt}{\zhuyin{#2}{#3}}\\
+		\end{tabular}}
+		\fontsize{10pt}{10pt}\selectfont \pinyin{#2#3}\\
 		\fontsize{10pt}{10pt}\selectfont #4
 	\end{minipage}
 }
 
 \begin{document}
-
 \zhchar{的}{de}{5}{p. possessive}
 \zhchar{是}{shi}{4}{être}
 \zhchar{不}{bu}{4}{ne pas}
