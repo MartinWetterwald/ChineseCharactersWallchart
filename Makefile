@@ -48,16 +48,16 @@ view: update
 	@printf "%-18s <$@>...\n" "Building stage 1" ;\
 	$(CC_CMD) $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
 	OK=$$? ;\
-	if [ $$OK -eq 0 ]; then\
-		printf "%-18s <$@>...\n" "Building stage 2" ;\
-		$(CC_CMD) $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
-		OK=$$? ;\
-	fi;\
-	if [ $$OK -eq 0 ]; then\
-		printf "%-18s <$@>...\n" "Building stage 3" ;\
-		$(CC_CMD) $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
-		OK=$$? ;\
-	fi;\
+	#if [ $$OK -eq 0 ]; then\
+	#	printf "%-18s <$@>...\n" "Building stage 2" ;\
+	#	$(CC_CMD) $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
+	#	OK=$$? ;\
+	#fi;\
+	#if [ $$OK -eq 0 ]; then\
+	#	printf "%-18s <$@>...\n" "Building stage 3" ;\
+	#	$(CC_CMD) $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
+	#	OK=$$? ;\
+	#fi;\
 	if [ $$OK -eq 0 ]; then\
 		echo; \
 		echo "$(BGCOLOR_GREEN)$(COLOR_WHITE)BUILD SUCCESSFUL$(COLOR_END)" ;\
