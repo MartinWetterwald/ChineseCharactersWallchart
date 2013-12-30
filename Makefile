@@ -2,6 +2,12 @@ THIS := $(lastword $(MAKEFILE_LIST))
 
 PDF_PREFIX=
 PDF_NAME=$(PDF_PREFIX)ChineseCharactersWallchart.pdf
+TEX=$(shell find -iname "*.tex")
+STY=$(shell find -iname "*.sty")
+
+TEX_NAME = $(PDF_NAME:%.pdf=%.tex)
+TEX_BUILD_FLAGS= -interaction=nonstopmode -file-line-error
+CC_CMD=xelatex
 
 #AUTOMATIC OS DETECTION
 OS=$(shell uname -s)
@@ -13,15 +19,10 @@ PDFVIEWER=xpdf
 endif
 endif
 
-TEX_NAME = $(PDF_NAME:%.pdf=%.tex)
-TEX_BUILD_FLAGS= -interaction=nonstopmode -file-line-error
-
 COLOR_END = \033[0m
 COLOR_WHITE = \033[1;37m
 BGCOLOR_GREEN = \033[42m
 BGCOLOR_RED = \033[41m
-
-CC_CMD=xelatex
 
 CLEAN_CMD=rm -f
 CLEAN_CMD+= *.backup *.aux *.toc *.ind *.idx *.ilg *.blg *.log *.out *.bbl *.dvi
@@ -43,19 +44,19 @@ all: clean update
 view: update
 	@$(PDFVIEWER) $(PDF_NAME) > /dev/null 2>&1 &
 
-%.pdf: %.tex $(wildcard *.tex) $(THIS)
+$(PDF_NAME): $(TEX) $(STY) $(THIS)
 	@$(CLEAN_CMD)
 	@printf "%-18s <$@>...\n" "Building stage 1" ;\
-	$(CC_CMD) $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
+	$(CC_CMD) $(TEX_BUILD_FLAGS) "$(TEX_NAME)" > $@.stdout 2> $@.stderr ;\
 	OK=$$? ;\
 	#if [ $$OK -eq 0 ]; then\
 	#	printf "%-18s <$@>...\n" "Building stage 2" ;\
-	#	$(CC_CMD) $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
+	#	$(CC_CMD) $(TEX_BUILD_FLAGS) "$(TEX_NAME)" > $@.stdout 2> $@.stderr ;\
 	#	OK=$$? ;\
 	#fi;\
 	#if [ $$OK -eq 0 ]; then\
 	#	printf "%-18s <$@>...\n" "Building stage 3" ;\
-	#	$(CC_CMD) $(TEX_BUILD_FLAGS) "$<" > $@.stdout 2> $@.stderr ;\
+	#	$(CC_CMD) $(TEX_BUILD_FLAGS) "$(TEX_NAME)" > $@.stdout 2> $@.stderr ;\
 	#	OK=$$? ;\
 	#fi;\
 	if [ $$OK -eq 0 ]; then\
