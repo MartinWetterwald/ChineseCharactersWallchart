@@ -9,7 +9,7 @@ ifeq ($(OS),Darwin)
 PDFVIEWER=open
 else
 ifeq ($(OS),Linux)
-PDFVIEWER=evince
+PDFVIEWER=xpdf
 endif
 endif
 
